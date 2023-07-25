@@ -1,2 +1,2 @@
-# ParseTG_BOT
-this bot can parse data from telegram sources 
+# reminder_bot
+this bot can collect and remind your notes and events
