@@ -6,6 +6,7 @@ from redis.asyncio.client import Redis
 
 config: Config = load_config('misc/.env')
 bot: Bot = Bot(token=config.bot_token.get_secret_value(), parse_mode='HTML')
+admin_list = config.admins
 
 redisClient = Redis(db=1)
 redisStorage: RedisStorage = RedisStorage(redis=redisClient)
