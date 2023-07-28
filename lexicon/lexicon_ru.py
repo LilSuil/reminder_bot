@@ -20,5 +20,6 @@ LEXICON_RU = {
 
     'denied': 'disclaim',
     'confirm': 'accept',
-    'Back to start': '<b>User menu:</b>'
+    'Back to start': '<b>User menu:</b>',
+    'UserID_Error': 'Error: Incorrect User ID format. Please use only numbers for input. \U0001F613'
 }

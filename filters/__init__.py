@@ -1,1 +1,1 @@
-from .admin_filters import IsAdmin, CheckDB
+from .admin_filters import IsAdmin, CheckDB, CheckUserList

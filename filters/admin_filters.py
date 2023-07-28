@@ -17,5 +17,14 @@ class CheckDB(BaseFilter):
     async def __call__(self, message: Message) -> bool:
         return bool(await self.client.get(f'USER_DATA-{message.from_user.id}'))
 
+class CheckUserList(BaseFilter):
+    def __init__(self, user_id, user_id_list):
+        self.user_id = user_id
+        self.user_id_list = user_id_list
+
+    async def __call__(self, message: Message) -> bool:
+        return self.user_id in self.user_id_list
+
+
 
 

@@ -39,6 +39,14 @@ class DbServices:
 
             await redisClient.sadd('USERS', user_id)
 
+    async def get_users_list(self) -> list:
+
+        susers = list(await redisClient.smembers('USERS'))
+        users = [user.decode('utf-8') for user in susers]
+
+        return users
+
+
 
 
 
