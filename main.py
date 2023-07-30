@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from loader import bot, dp
-from handlers import remindRouter, interactiveRouter, writeRouter, adminRouter, otherRouter
+from handlers import remindRouter, interactiveRouter, manageRouter, adminRouter, otherRouter
 from database import redisClient
 # Инициализируем логгер
 logger = logging.getLogger(__name__)
@@ -16,7 +16,7 @@ async def main():
                '[%(asctime)s] - %(name)s - %(message)s')
 
     logger.info('Starting bot')
-    dp.include_routers(remindRouter, interactiveRouter, writeRouter, adminRouter, otherRouter)
+    dp.include_routers(remindRouter, interactiveRouter, manageRouter, adminRouter, otherRouter)
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 

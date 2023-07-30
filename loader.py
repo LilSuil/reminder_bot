@@ -1,5 +1,5 @@
 from config_data import load_config, Config
-from aiogram import Bot, Dispatcher, types, F
+from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.redis import RedisStorage
 from redis.asyncio.client import Redis
 
